@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import FoodFinder from './components/FoodFinder';
+import Nav from './components/Nav';
+import About from './components/About';
+import { useState } from 'react';
+
+export const PAGES = {
+  ABOUT : "ABOUT",
+  FINDER : "FINDER"
+}; 
 
 function App() {
+  const [activePage, setActivePage] = useState(PAGES.ABOUT);
+  console.log(activePage)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav activePage ={activePage} setActivePage={setActivePage}/>
+      <main>
+        {
+          activePage == PAGES.ABOUT ? <About/> : <FoodFinder/>
+        }
+      </main>
     </div>
   );
 }

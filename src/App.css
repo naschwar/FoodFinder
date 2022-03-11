@@ -1,38 +1,95 @@
-.App {
+body{
+  background-color: rgb(140, 140, 78);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+main{
+  clear: both;
+  padding: 2%;
+  padding: 2% 20%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  font-size: 2.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#appIntro{
+  font-size: 1.5rem;
+  padding: 1.5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav > ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.nav li {    
+  border: 2px solid rgb(206, 206, 143);;
+  border-left: 0;
+  border-top: 0;
+  font-size: 1.4rem;
+  padding: 1%;
+  display: block;
+  float: left;
+}
+
+.nav li:hover{
+  background-color: rgb(160, 160, 111);
+  cursor: pointer;
+}
+
+.nav a{
+  color: black;
+  text-decoration: none;
+}
+
+.active{
+  background-color: rgb(206, 206, 143);
+}
+
+.foodFinderTable{
+  background-color: rgba(255, 192, 203, 0.323);
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.foodFinderTable td, th{
+  border: 1px solid rgba(112, 112, 112, 0.857);
+  text-align: left;
+  padding: 2%;
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(255, 192, 203, 0.515);
+}
+th{
+  background-color: rgba(237, 190, 198, 0.864);
+  border-bottom: 3px solid black;
+  font-weight: 900;
+}
+
+.finderConfig{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 1%;
+  justify-content: space-between;
+  padding: 1%;
+  background-color: rgb(160, 160, 111);
 }
 
-.App-link {
-  color: #61dafb;
+.configItem{
+  display: inline;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+table{
+  clear: both;
+}
+
+.metaInfo{
+  color:rgb(63, 63, 63);
+  font-size: .9rem;
+  font-weight: 500;
 }
